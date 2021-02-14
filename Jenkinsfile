@@ -9,7 +9,7 @@ pipeline {
 
        steps{
           withCredentials([usernameColonPassword(credentialsId: 'open-weather', variable: 'USERPASS')]) {
-            echo "$USERPASS"
+            //echo "$USERPASS"
             sh 'python script.py'
           }
       }
