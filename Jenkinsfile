@@ -5,7 +5,12 @@ pipeline {
     cron('0 * * * *')
   }
   stages{
-    stage('Check'){
+    stage('Install packages'){
+      steps{
+        sh 'pip install -r requirements'
+      }
+    }
+    stage('Run script'){
 
       steps{
 withCredentials([usernamePassword(credentialsId: 'open-weather', usernameVariable: 'USERNAME', passwordVariable: 'API_KEY')]) {              
