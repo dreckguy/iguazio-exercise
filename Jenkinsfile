@@ -8,12 +8,13 @@ pipeline {
     stage('Check'){
 
        steps{
-          sh 'python script.py'
-  }
+          withCredentials([usernameColonPassword(credentialsId: 'open-weather', variable: 'USERPASS')]) {
+            echo "$USERPASS"
+            sh 'python script.py'
+          }
+      }
       
-}
+  }
        
-}
-
-  
+  }
 }
