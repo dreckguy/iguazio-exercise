@@ -23,10 +23,10 @@ if response.status_code == 200:
    # weather report
    report = data['weather']
    print( CITY + ':')
-   print(f"Temperature: {temperature}")
-   print(f"Humidity: {humidity}")
-   print(f"Pressure: {pressure}")
-   print(f"Weather Report: {report[0]['description']}")
+   print('Temperature: ' + str(temperature))
+   print('Humidity: ' + str(humidity))
+   print('Pressure: ' + str(pressure))
+   print('Weather Report: ' + report[0]['description'])
 else:
    # showing the error message
    print("Error in the HTTP request")
