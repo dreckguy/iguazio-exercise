@@ -8,7 +8,7 @@ pipeline {
     stage('Check'){
 
        steps{
-          echo "Put steps here!"
+          sh 'python script.py'
   }
       
 }
