@@ -8,7 +8,7 @@ pipeline {
     stage('Check'){
 
       steps{
-            withCredentials([usernameColonPassword(credentialsId: 'mylogin', variable: 'USERPASS')]) {
+            withCredentials([usernameColonPassword(credentialsId: 'open-weather', variable: 'USERPASS')]) {
               echo "${USERPASS}"
               sh 'python script.py'
             }          
