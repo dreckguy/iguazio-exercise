@@ -22,7 +22,7 @@ if response.status_code == 200:
    pressure = main['pressure']
    # weather report
    report = data['weather']
-   print(f"{CITY:-^30}")
+   print( CITY + ':')
    print(f"Temperature: {temperature}")
    print(f"Humidity: {humidity}")
    print(f"Pressure: {pressure}")
