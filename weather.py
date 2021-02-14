@@ -1,5 +1,5 @@
 # importing requests and json
-import requests, json
+import sys,requests, json
 API_KEY = sys.argv[1]
 # base URL
 BASE_URL = "https://api.openweathermap.org/data/2.5/weather?"
