@@ -10,11 +10,13 @@ pipeline {
   }
   stages{
     stage('Check'){
-      
-}
-        steps{
+
+       steps{
           echo "Put steps here!"
   }
+      
+}
+       
 }
 
   
