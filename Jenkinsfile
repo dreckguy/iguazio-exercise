@@ -8,9 +8,8 @@ pipeline {
     stage('Check'){
 
       steps{
-            withCredentials([usernameColonPassword(credentialsId: 'open-weather', variable: 'USERPASS')]) {
-              echo "${USERPASS}"
-              sh 'python script.py'
+withCredentials([usernamePassword(credentialsId: 'amazon', usernameVariable: 'USERNAME', passwordVariable: 'API_KEY')]) {              
+              sh "python script.py ${API_KEY}"
             }          
       }
     }
