@@ -8,7 +8,7 @@ pipeline {
     stage('Check'){
 
       steps{
-withCredentials([usernamePassword(credentialsId: 'amazon', usernameVariable: 'USERNAME', passwordVariable: 'API_KEY')]) {              
+withCredentials([usernamePassword(credentialsId: 'open-weather', usernameVariable: 'USERNAME', passwordVariable: 'API_KEY')]) {              
               sh "python script.py ${API_KEY}"
             }          
       }
