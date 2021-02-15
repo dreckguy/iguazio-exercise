@@ -2,7 +2,8 @@
 pipeline {
   agent any
   triggers {
-    pollSCM('0 * * * *')
+    cron('0 * * * *')
+    //pollSCM('* * * * *')
   }
   stages{
     stage('Install packages'){
